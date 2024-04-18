@@ -9,8 +9,7 @@ app.use(express.json({limit:'40mb'}))
 
 const routes = require("./routes/apiRoutes")
 app.use("/api",routes)
-const seeder = require("./config/seeder")
-seeder.adminseeder()
+
 
 
 app.all("**",(req,res)=>{

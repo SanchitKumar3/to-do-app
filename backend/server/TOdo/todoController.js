@@ -69,9 +69,9 @@ add = (req, res) => {
 }
 getall = async (req, res) => {
 
-    var totalcount = await ToDo.find(req.body).countDocuments().exec()
+    var totalcount = await ToDo.find().countDocuments().exec()
 
-    ToDo.find(req.body)
+    ToDo.find()
         .then(ToDoData => {
             res.json({
                 status: 200,
